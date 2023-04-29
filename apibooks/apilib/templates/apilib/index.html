@@ -1,0 +1,26 @@
+<form method="POST">
+  {% csrf_token %}
+  <div>
+    <label for="title">Название:</label>
+    <input type="text" id="title" name="title" value="{{ book.title|default:'' }}" required>
+  </div>
+  <div>
+    <label for="author">Автор:</label>
+    <input type="text" id="author" name="author" value="{{ book.author|default:'' }}" required>
+  </div>
+  <div>
+    <label for="description">Описание:</label>
+    <textarea id="description" name="description" required>{{ book.description|default:'' }}</textarea>
+  </div>
+  <div>
+    <label for="publication_date">Дата публикации:</label>
+    <input type="date" id="publication_date" name="publication_date" value="{{ book.publication_date|default:'' }}" required>
+  </div>
+  <button type="submit">Сохранить</button>
+</form>
+
+<form method="POST">
+  {% csrf_token %}
+  <p>Вы уверены, что хотите удалить "{{ book.title }}"?</p>
+  <button type="submit">Удалить</button>
+</form>
