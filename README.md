@@ -43,7 +43,7 @@ DELETE /api/books/<int:pk>/ - удаление книги из базы данн
 * клонируйте репозиторий:
 
 ```
-git clone https://github.com/NViQ/Lantern.git
+git clone https://github.com/NViQ/apibooks.git
 ```
 
 Установите все необходимые зависимости, выполнив команду:
