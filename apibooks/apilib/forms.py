@@ -5,7 +5,7 @@ from .models import Books
 class BookForm(forms.ModelForm):
     class Meta:
         model = Books
-        fields = ['title', 'author', 'description', 'publication_date']
+        fields = ['author', 'title', 'description', 'publication_date']
 
     def __init__(self, *args, **kwargs):
         self.user = kwargs.pop('user', None)
